@@ -1,0 +1,71 @@
+@import '../../node_modules/semantic-ui-css/semantic.min.css';
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    color: #333;
+}
+
+.navbarBrand {
+    // font-family: monospace;
+    font-size: 180%;
+    padding: 5px !important;
+}
+
+.myImage {
+    filter: grayscale(0.8);
+}
+
+.aboutText {
+    // text-align: justify;
+}
+
+.jumbotitle {
+    font: {
+        size: 2em;
+        weight: 700;
+    }
+    color: #343434;
+    @extend .mb-2;
+}
+
+p {
+    font-size: 1.2em;
+    // letter-spacing: 0.01em;
+    line-height: 1.7em;
+    color: #555;
+}
+
+.articleSummary {
+    &__header {
+        font-size: 2.3em;
+        font-weight: 600;
+        line-height: 1.15em;
+        @extend .mb-2;
+    }
+
+    &__date {
+        font-size: 1.1em;
+        color: grey;
+    }
+
+    &__desc {
+    }
+
+    &__image {
+        height: 100%;
+    }
+}
+
+.homelist {
+    background-color: #fafafa;
+    @extend .pv-4;
+}
+
+// [hidden] {
+//     display: none;
+// }
+
+@import './system';

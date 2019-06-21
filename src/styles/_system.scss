@@ -1,0 +1,86 @@
+$unit: 10px;
+
+// Spacing
+$directions: ( l: left, r: right, b: bottom, t: top, );
+$sptype: ( p: padding, m: margin);
+@for $i from 0 to 16 {
+    @each $spkey,
+    $spval in $sptype {
+        .#{$spkey}-#{$i} {
+            #{$spval}: $unit * $i;
+        }
+        ;
+        ;
+        @each $dirkey,
+        $dirval in $directions {
+            .#{$spkey}#{$dirkey}-#{$i} {
+                #{$spval}-#{$dirval}: $unit * $i;
+            }
+        }
+        .#{$spkey}h-#{$i} {
+            #{$spval}-left: $unit * $i;
+            #{$spval}-right: $unit * $i;
+        }
+        .#{$spkey}v-#{$i} {
+            #{$spval}-top: $unit * $i;
+            #{$spval}-bottom: $unit * $i;
+        }
+    }
+}
+
+.m-a {
+    margin: auto;
+}
+
+.mh-a {
+    margin: {
+        left: auto;
+        right: auto;
+    }
+}
+
+.mv-a {
+    margin: {
+        top: auto;
+        bottom: auto;
+    }
+}
+
+
+// ################################
+// ##########   Mixins   ##########
+// ################################
+
+
+@mixin border($color: red, $style: dashed, $size: 1px, $radius: 0px) {
+    border: $size $style $color;
+    border-radius: $radius
+}
+
+.border {
+    @include border;
+}
+
+@mixin smooth($duration: 1s, $type: ease-in-out, $for: all) {
+    transition: $duration $type $for;
+}
+
+@mixin bgbg($url: null, $bg: null) {
+    @if($url) {
+        background-image: url($url);
+    }
+    @if($bg==null) {
+        background: {
+            position: center;
+            size: cover;
+        }
+    }
+}
+
+@mixin size($hor, $ver: null) {
+    @if($ver==null) {
+        $ver: $hor;
+    }
+    width: $hor;
+    height: $ver;
+}
