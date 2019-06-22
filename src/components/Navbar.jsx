@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 
+import {Link} from 'react-router-dom'
+
 import { Container, Header, Responsive, Visibility, Segment, Menu } from 'semantic-ui-react'
 
 // Heads up!
@@ -22,9 +24,9 @@ const Navbar = () => {
             <Segment inverted textAlign="center" vertical>
                 <Menu borderless inverted fixed={isNavSticky ? 'top' : null} size="large" className={isNavSticky?'pv-1':''}>
                     <Container>
-                        <Menu.Item as="a" className="navbarBrand">Aakarsh Chopra</Menu.Item>
-                        <Menu.Item active position="right" as="a">About</Menu.Item>
-                        <Menu.Item as="a">Browse</Menu.Item>
+                        <Menu.Item as={Link} to='/' className="navbarBrand">Aakarsh Chopra</Menu.Item>
+                        <Menu.Item as="a" href='/#about' position="right">About</Menu.Item>
+                        <Menu.Item as="a" href='/#list'>Articles</Menu.Item>
                     </Container>
                 </Menu>
             </Segment>

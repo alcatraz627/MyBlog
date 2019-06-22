@@ -1,21 +1,51 @@
 @import '../../node_modules/semantic-ui-css/semantic.min.css';
 
+// @import url('https://fonts.googleapis.com/css?family=Neucha&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Overlock&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css?family=Averia+Sans+Libre&display=swap');
+.formal {
+    font-family: 'Raleway', sans-serif;
+}
+
+.informal {
+    // font-family: 'Neucha', cursive;
+    font-family: 'Overlock', cursive;
+}
+
+
 html,
 body {
+    scroll-behavior: smooth;
     padding: 0;
     margin: 0;
-    font-family: sans-serif;
     color: #333;
+    @extend .formal; 
+}
+
+a {
+    color: initial;
 }
 
 .navbarBrand {
-    // font-family: monospace;
     font-size: 180%;
     padding: 5px !important;
+    // @extend .informal;
+    font-family: 'Averia Sans Libre', cursive;
 }
 
 .myImage {
     filter: grayscale(0.8);
+}
+
+.listHeader {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 700;
+    @extend .pb-2;
+    @extend .informal;
 }
 
 .aboutText {
@@ -29,6 +59,7 @@ body {
     }
     color: #343434;
     @extend .mb-2;
+    @extend .informal;
 }
 
 p {
@@ -38,12 +69,12 @@ p {
     color: #555;
 }
 
-.articleSummary {
+.article {
     &__header {
         font-size: 2.3em;
         font-weight: 600;
         line-height: 1.15em;
-        @extend .mb-2;
+        @extend .mb-1;
     }
 
     &__date {
@@ -54,7 +85,7 @@ p {
     &__desc {
     }
 
-    &__image {
+    &__thumbimage {
         height: 100%;
     }
 }
