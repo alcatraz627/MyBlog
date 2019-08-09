@@ -15,6 +15,7 @@ const ARTICLES = {
         date: "Aug 9, 2019",
         preview: "An elementary proof of concept of a simple language, demonstrating how to evaluate statements and expressions. Can be extended to a toolkit for solving simple puzzles by using programming to code the logic required to solve.",
         tags: "JS, Programming, Interpreter",
+        github: "https://github.com/alcatraz627/toylang",
         image: 'js.png'
     },
     "3": {

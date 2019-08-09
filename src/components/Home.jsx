@@ -18,12 +18,18 @@ const HomeAbout = () => {
 
                     {['Full-Stack Development', 'Designing', 'Petting Dogs', 'Machine Learning'].map(e => <Label key={e}>{e}</Label>)}
                     <div className="mt-1" />
+                    {['React', 'Django', 'Material Design', 'Rails', 'Angular'].map(e => <Label basic color="blue" key={e}>{e}</Label>)}
+                    <div className="mt-1" />
                     {['History', 'Psychology', 'Sci-fi'].map(e => <Label basic color="brown" key={e}>{e}</Label>)}
                     <br />
                     <br />
+
                     {aboutText.split("\n\n").map(e => (
                         <p className="aboutText">{e}</p>
                     ))}
+
+                    <a href="https://drive.google.com/file/d/1S88s7cq9Iqv_zGN72qVfIBoxw8rEG2cV/view?usp=sharing" target="_blank"><Button content="View my resume" primary /></a>
+                    
 
                     <Divider />
                     {[["twitter", "https://twitter.com/aakarshchopra"], ["linkedin alternate", "https://www.linkedin.com/in/aakarshchopra/"], ["github", "https://github.com/alcatraz627"]].map(([tag, link]) => 
