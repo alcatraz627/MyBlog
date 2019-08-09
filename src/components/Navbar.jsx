@@ -26,7 +26,7 @@ const Navbar = () => {
                     <Container>
                         <Menu.Item as={Link} to='/' className="navbarBrand">Aakarsh Chopra</Menu.Item>
                         <Menu.Item as="a" href='/#about' position="right">About</Menu.Item>
-                        <Menu.Item as="a" href='/#list'>Articles</Menu.Item>
+                        <Menu.Item as="a" href='/#list'>Projects</Menu.Item>
                     </Container>
                 </Menu>
             </Segment>

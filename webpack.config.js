@@ -20,6 +20,12 @@ module.exports = {
                 ]
             },
             {
+                test: /\.txt$/,
+                use: [
+                    'raw-loader',
+                ]
+            },
+            {
                 test: /\.(jp?eg|png|gif)$/,
                 use: [{
                     loader: 'url-loader',

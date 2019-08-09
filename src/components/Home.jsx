@@ -3,6 +3,8 @@ import { Container, Header, Label, Image, Divider, Grid, Button, Icon } from 'se
 
 import ArticleSummary from './ArticleSummary'
 
+import aboutText from '../about.txt';
+
 import ARTICLES from '../articles'
 
 const HomeAbout = () => {
@@ -14,17 +16,18 @@ const HomeAbout = () => {
                     <div className="jumbotitle">Welcome to my Blog!</div>
 
 
-                    {['Coding', 'Designing', 'Petting Dogs', 'The cat too if available'].map(e => <Label key={e}>{e}</Label>)}
+                    {['Full-Stack Development', 'Designing', 'Petting Dogs', 'Machine Learning'].map(e => <Label key={e}>{e}</Label>)}
                     <div className="mt-1" />
-                    {['History', 'Geo-politics', 'Sci-fi & Futurism'].map(e => <Label basic color="blue" key={e}>{e}</Label>)}
+                    {['History', 'Psychology', 'Sci-fi'].map(e => <Label basic color="brown" key={e}>{e}</Label>)}
                     <br />
                     <br />
-                    <p className="aboutText">I'm a 22 year old engineering undergrad at IIT Madras, Chennai. I post my musings here. I also post some nice things I've learnt to build over time.</p>
-                    <p className="aboutText">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                    <p className="aboutText">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                    {aboutText.split("\n\n").map(e => (
+                        <p className="aboutText">{e}</p>
+                    ))}
 
                     <Divider />
-                    {["facebook f", "twitter", "linkedin alternate", "github"].map(e => <Button key={e} icon size="small" circular color={e == 'github' ? 'black' : e.split(" ")[0]} content={<Icon name={e} />} />)}
+                    {[["twitter", "https://twitter.com/aakarshchopra"], ["linkedin alternate", "https://www.linkedin.com/in/aakarshchopra/"], ["github", "https://github.com/alcatraz627"]].map(([tag, link]) => 
+                    <a href={link} target="_blank"><Button key={tag} icon size="small" circular content={<Icon name={tag} />} /></a>)}
                 </Grid.Column>
                 <Grid.Column width={6}>
                     <Image rounded floated="right" className="myImage" src="./assets/me.jpg" />
@@ -44,7 +47,7 @@ const Home = () => {
             <HomeAbout />
             <div className="homelist">
                 <a name="list">
-                    <div className="listHeader">Browse Articles</div>
+                    <div className="listHeader">My Projects</div>
                 </a>
                 {Object.keys(ARTICLES).map(e => <ArticleSummary id={e} {...ARTICLES[e]} key={e} />)}
 

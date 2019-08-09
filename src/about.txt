@@ -1,0 +1,7 @@
+I'm a 22 year old engineering undergrad at IIT Madras, Chennai. I like building software. I post some nice things here I've learnt to build over time.
+
+My primary interest is in full-stack software development, mainly React and Django as my stack, but I have experience with other frameworks like Laravel, Rails, Flask and Node-Express for back-end, and Vue JS and Angular for front-end. Additionally, I've worked sufficiently with both native CSS3, and several UI frameworks like Bootstrap 4, Sematic-UI, Material Design, Bulma, and a few more.
+
+Additionally, I have an explorative interest in UX design and Machine Learning, and am pursuing learning those fields with an eventual goal of switching to a proper Product Development portfolio.
+
+For my hobbies, I'm a hopelessly indoor nerd who likes reading history, political theory, science fiction, and psychology. Oh, and some story-writing.
