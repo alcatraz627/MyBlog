@@ -4,7 +4,7 @@ import { Container, Header, Responsive, Visibility, Segment, Menu, Label, Image,
 import { Link } from 'react-router-dom'
 
 const ArticleSummary = props => {
-    const { date, title, preview, tags, image, id, github } = props
+    const { date, title, preview, tags, image, github } = props
 
     return (
         <Container textAlign="left" className="mv-4">

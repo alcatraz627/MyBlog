@@ -28,12 +28,12 @@ const HomeAbout = () => {
                         <p className="aboutText">{e}</p>
                     ))}
 
-                    <a href="https://drive.google.com/file/d/1S88s7cq9Iqv_zGN72qVfIBoxw8rEG2cV/view?usp=sharing" target="_blank"><Button content="View my resume" primary /></a>
-                    
+                    <a href="https://drive.google.com/open?id=1hTTvcy-rUoQqEjUVYyxTSpC5XcO4UHru" target="_blank"><Button content="View my resume" primary /></a>
+
 
                     <Divider />
-                    {[["twitter", "https://twitter.com/aakarshchopra"], ["linkedin alternate", "https://www.linkedin.com/in/aakarshchopra/"], ["github", "https://github.com/alcatraz627"]].map(([tag, link]) => 
-                    <a href={link} target="_blank"><Button key={tag} icon size="small" circular content={<Icon name={tag} />} /></a>)}
+                    {[["linkedin alternate", "https://www.linkedin.com/in/aakarshchopra/"], ["github", "https://github.com/alcatraz627"]].map(([tag, link]) =>
+                        <a href={link} target="_blank"><Button key={tag} icon size="small" circular content={<Icon name={tag} />} /></a>)}
                 </Grid.Column>
                 <Grid.Column width={6}>
                     <Image rounded floated="right" className="myImage" src="./assets/me.jpg" />
@@ -52,9 +52,13 @@ const Home = () => {
         <div>
             <HomeAbout />
             <div className="homelist">
-                <a name="list">
+                <a name="list" className="a">
                     <div className="listHeader">My Projects</div>
+                    {/* <div className="listSubHeader">My Projects</div> */}
                 </a>
+                <div className="listSubHeader">Find them on my &nbsp;
+                    <a href="https://github.com/alcatraz627?tab=repositories" target="_blank">Github<Icon size="small" name="angle right" />Repositories Tab <Icon name="github" /></a>
+                </div>
                 {Object.keys(ARTICLES).map(e => <ArticleSummary id={e} {...ARTICLES[e]} key={e} />)}
 
             </div>

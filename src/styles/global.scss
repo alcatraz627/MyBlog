@@ -26,7 +26,7 @@ body {
     @extend .formal;
 }
 
-a {
+a, .a {
     color: initial;
 }
 
@@ -47,6 +47,15 @@ a {
     font-weight: 700;
     @extend .pb-2;
     @extend .informal;
+    color: initial;
+}
+
+.listSubHeader {
+    text-align: center;
+    font-size: 1.2em;
+    @extend .pb-1;
+    // font-weight: 700;
+    // @extend .informal;
 }
 
 .aboutText {
